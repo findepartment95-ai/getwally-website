@@ -223,14 +223,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section shell" id="family">
-        <div className="section-head compact">
-          <div><p className="eyebrow">Как это работает</p><h2>От данных — к решению<br />за три понятных шага</h2></div>
-        </div>
-        <div className="steps">
-          {steps.map(([number, title, text]) => (
-            <article key={number}><span>{number}</span><div><h3>{title}</h3><p>{text}</p></div></article>
-          ))}
+      <section className="family-section" id="family">
+        <img className="family-visual" src="https://getwally.uz/wally-steps-robot.png" alt="" aria-hidden="true" />
+        <div className="section shell family-content">
+          <div className="section-head compact">
+            <div><p className="eyebrow">Как это работает</p><h2>От данных — к решению<br />за три понятных шага</h2></div>
+          </div>
+          <div className="steps">
+            {steps.map(([number, title, text]) => (
+              <article key={number}><span>{number}</span><div><h3>{title}</h3><p>{text}</p></div></article>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -248,16 +251,19 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="roadmap shell" id="partners">
-        <div>
-          <p className="eyebrow">Продукт Узбекистана</p>
-          <h2>WALLY растёт вместе<br />с пользователем</h2>
-          <p>Первый релиз объединит Telegram-бот и web-приложение. Затем — банковские интеграции, расширенная семейная аналитика и масштабирование.</p>
-        </div>
-        <div className="roadmap-list">
-          <article><span>Сейчас</span><b>MVP и раннее тестирование</b><p>Голос, категоризация, бюджет и цели</p></article>
-          <article><span>Далее</span><b>Интеграции и персонализация</b><p>Банки, финансовые сценарии и семейный режим</p></article>
-          <article><span>Масштаб</span><b>Международное развитие</b><p>Локализация продукта и развитие партнёрской сети</p></article>
+      <section className="roadmap-section" id="partners">
+        <img className="roadmap-visual" src="https://getwally.uz/wally-roadmap-wave.png" alt="" aria-hidden="true" />
+        <div className="roadmap shell">
+          <div>
+            <p className="eyebrow">Продукт Узбекистана</p>
+            <h2>WALLY растёт вместе<br />с пользователем</h2>
+            <p>Первый релиз объединит Telegram-бот и web-приложение. Затем — банковские интеграции, расширенная семейная аналитика и масштабирование.</p>
+          </div>
+          <div className="roadmap-list">
+            <article><span>Сейчас</span><b>MVP и раннее тестирование</b><p>Голос, категоризация, бюджет и цели</p></article>
+            <article><span>Далее</span><b>Интеграции и персонализация</b><p>Банки, финансовые сценарии и семейный режим</p></article>
+            <article><span>Масштаб</span><b>Международное развитие</b><p>Локализация продукта и развитие партнёрской сети</p></article>
+          </div>
         </div>
       </section>
 
