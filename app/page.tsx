@@ -1,14 +1,22 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import {
+  AudioLines,
+  BrainCircuit,
+  CalendarClock,
+  ChartNoAxesCombined,
+  UsersRound,
+  WalletCards,
+} from "lucide-react";
 
 const features = [
-  ["01", "Единая картина", "Счета, карты, расходы и цели — в одном понятном пространстве."],
-  ["02", "Голосовое управление", "Спросите о деньгах так же просто, как спросили бы личного финансиста."],
-  ["03", "Умные рекомендации", "WALLY замечает закономерности и предлагает следующий разумный шаг."],
-  ["04", "Семейный бюджет", "Общие цели, личные лимиты и прозрачность без лишнего контроля."],
-  ["05", "Платежи и долги", "Напоминания, календарь обязательств и ранние предупреждения о рисках."],
-  ["06", "Финансовые привычки", "Советы адаптируются к вашему поведению, стилю жизни и приоритетам."],
+  { number: "01", icon: WalletCards, title: "Единая картина", text: "Счета, карты, расходы и цели — в одном понятном пространстве." },
+  { number: "02", icon: AudioLines, title: "Голосовое управление", text: "Спросите о деньгах так же просто, как спросили бы личного финансиста." },
+  { number: "03", icon: ChartNoAxesCombined, title: "Умные рекомендации", text: "WALLY замечает закономерности и предлагает следующий разумный шаг." },
+  { number: "04", icon: UsersRound, title: "Семейный бюджет", text: "Общие цели, личные лимиты и прозрачность без лишнего контроля." },
+  { number: "05", icon: CalendarClock, title: "Платежи и долги", text: "Напоминания, календарь обязательств и ранние предупреждения о рисках." },
+  { number: "06", icon: BrainCircuit, title: "Финансовые привычки", text: "Советы адаптируются к вашему поведению, стилю жизни и приоритетам." },
 ];
 
 const steps = [
@@ -98,9 +106,14 @@ export default function Home() {
           <p>WALLY превращает ежедневные операции в ясную картину и помогает не откладывать важные финансовые решения.</p>
         </div>
         <div className="feature-grid">
-          {features.map(([number, title, text]) => (
+          {features.map(({ number, icon: Icon, title, text }) => (
             <article className="feature-card" key={number}>
-              <span>{number}</span><h3>{title}</h3><p>{text}</p>
+              <div className="feature-card-top">
+                <span>{number}</span>
+                <div className="feature-icon" aria-hidden="true"><Icon /></div>
+              </div>
+              <h3>{title}</h3>
+              <p>{text}</p>
             </article>
           ))}
         </div>
