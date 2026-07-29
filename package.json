@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "drizzle-orm": "0.45.2",
+    "lucide-react": "^0.468.0",
     "next": "16.2.6",
     "react": "19.2.6",
     "react-dom": "19.2.6"
@@ -40,5 +41,5 @@
     "wrangler": "4.92.0"
   },
   "type": "module",
-  "displayName": "\u041d\u043e\u0432\u044b\u0439 \u0441\u0430\u0439\u0442"
+  "displayName": "Новый сайт"
 }
